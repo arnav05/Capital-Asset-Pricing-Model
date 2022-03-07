@@ -4,17 +4,15 @@ import pandas as pd
 import yfinance as yf
 import matplotlib.pyplot as plt
 
-from capitalAssetPricingModel import *
-
 if __name__ == '__main__':
 
     portfolio = []
     weights = []
     data = {}
 
-    print("\nPlease input start and end date for your analysis."
-          "\n Accepted input (YYYY-MM-DD) : 2020-02-03 2022-01-01 \n(start date followed by end date).")
-    dates = input("Dates: ")
+    print("\nPlease input start and end date for your analysis (start date followed by end date)." 
+          "\nAccepted input (YYYY-MM-DD) : 2020-02-03 2022-01-01")
+    dates = input(" \nDates: ")
     datesList = dates.split(' ')
 
     start_date = datesList[0]
@@ -23,7 +21,7 @@ if __name__ == '__main__':
     print("\nPlease input ticker symbol/ symbols of stocks/Bonds in your portfolio."
           "\nAccepted example input:\n1. \"AAPL NVDA Tsla ge AMZN\" if you've a portfolio.\n"
           "2. \"AAPL\" if you've a single stock.")
-    inputPortfolio = input("Portfolio: ")
+    inputPortfolio = input(" \nPortfolio: ")
 
     # Splitting input by spaces in between
     portfolio = inputPortfolio.split(' ')
